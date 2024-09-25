@@ -22,7 +22,5 @@ def main()->None:
 if __name__== "__main__":
     main()
 
-'''
-Create a function that allows the user to read a file directly (such as a txt)
-so the user doesn't have to copy and paste text.'''
+
 
