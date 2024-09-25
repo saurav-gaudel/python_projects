@@ -1,0 +1,1 @@
+here is text to count frequency of words.

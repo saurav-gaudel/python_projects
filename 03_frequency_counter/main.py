@@ -7,8 +7,13 @@ def frequency_counter(text:str)->list[tuple[str,int]]:
     word_counts: Counter = Counter(words)
     return word_counts.most_common()
 
+def read_file(file_path: str) -> str:
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return file.read()
+
 def main()->None:
-    text = input("Enter text:").strip()
+    file_path = input("Enter the path to the text file: ").strip()
+    text = read_file(file_path)
     word_frequencies: list[tuple[str,int]]= frequency_counter(text)
     for word, count in word_frequencies:
         print(f"{word} : {count}")
@@ -16,3 +21,8 @@ def main()->None:
 
 if __name__== "__main__":
     main()
+
+'''
+Create a function that allows the user to read a file directly (such as a txt)
+so the user doesn't have to copy and paste text.'''
+
